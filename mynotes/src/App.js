@@ -6,7 +6,7 @@ import Home from './components/authent/Home.js';
 
 
 function App() {
-  const [user,setUser] = useState (undefined)
+  const [user,setUser] = useState ({user: "ale@me.com"})
   return (
     <>
      
