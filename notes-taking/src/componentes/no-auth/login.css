@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&family=Zen+Loop&display=swap');
+
+/*font-family: 'Yaldevi', sans-serif;
+font-family: 'Zen Loop', cursive;
+*/
+* {
+  background-color: #fff5db;
+}
+
+h1 {
+  display: flex;
+  font-family: 'Zen Loop', cursive;
+  font-size: 120px;
+  justify-content: center;
+}
+p {
+  display: flex;
+  font-family: 'Zen Loop', cursive;
+  font-size: 50px;
+  justify-content: center;
+  margin-top: -90px;
+}
+
+.firstimg {
+  position: absolute;
+  margin-left: 40px;
+  width: 680px;
+  margin-top: -60px;
+}
+.google {
+  display: flex;
+margin-left: 240px;
+  width: 280px;
+  margin-top: 620px;
+}
+
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+.btn-google{
+  width: 20px;
+}
