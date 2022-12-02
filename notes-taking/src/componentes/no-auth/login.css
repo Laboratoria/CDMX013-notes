@@ -41,6 +41,48 @@ margin-left: 240px;
 
 }
 
-.btn-google{
-  width: 20px;
+h2 {  
+  display: flex;
+  font-family: 'Zen Loop', cursive;
+  font-size:40px;
+  justify-content: center;
+} 
+
+h4{
+  display: flex;
+  font-family: 'Zen Loop', cursive;
+  font-size: 50px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.back {
+  position: absolute;
+  margin-left: 20px;
+  width: 50px;
+  margin-top: -180px;
+}
+
+.logout {
+position: absolute;
+margin-left: 700px;
+  width: 50px;
+  margin-top: -180px;
+}
+
+.create{
+    position: absolute;
+    margin-left: 70px;
+      width: 630px;
+      margin-top: 40px;
+    
+}
+
+.trash{
+    position: absolute;
+    margin-left: 480px;
+      width: 40px;
+      margin-top: 540px;
+    
+
 }

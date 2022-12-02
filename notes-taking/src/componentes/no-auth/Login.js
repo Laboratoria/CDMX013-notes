@@ -16,11 +16,7 @@ export default function Login() {
                 alt={""}
                 className="firstimg"
             />
-            <img src={images('./googlebutton.png')}
-                alt={""}
-                className="google"
-            />
-            <button className="btn-google" onClick={()=>{clic()}}>Sign in with Google</button>
-        </div>
+            <img src={images('./googlebutton.png')}alt={""}className="google" onClick={()=>{clic()}}></img>
+                    </div>
     )
 };
