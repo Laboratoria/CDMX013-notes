@@ -5,12 +5,12 @@ const providerGoogle = new GoogleAuthProvider();
 
 export const loginGoogle = ()=> {
 
-    signInWithPopup(auth, providerGoogle)
-        .then((result) => {
+  signInWithPopup(auth, providerGoogle)
+    .then((result) => {
             //onNavigate('/home');
             console.log('google sign in');
         })
-        .catch((error) => {
+    .catch((error) => {
             console.log(error);
         });
 };
