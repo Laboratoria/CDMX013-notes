@@ -1,12 +1,17 @@
-import './Login.css'
-import logo from '../images/mynoteslogo.png'
-import { googleAuth } from '../../firebase/google'
 
-export default function Login(){
-const googleEvent = () => {
-    googleAuth ();
-    console.log("si jala");
-}
+import './Login.css'
+import logo from '../components/images/mynoteslogo.png'
+import { googleAuth } from '../components/firebase/google'
+
+export default function Login(props){
+    const {setUser} = props;
+    
+function googleEvent () {
+
+    setUser(googleAuth);   
+   
+} 
+
     return (
         <div className="margin">
             <div className="background"> 

@@ -1,14 +1,19 @@
 import './Home.css'
-import idea from '../images/ideahome.png'
-import logout from '../images/iconlogout.png'
-import add from '../images/iconadd.png'
+import idea from '../components/images/ideahome.png'
+import logout from '../components/images/iconlogout.png'
+import add from '../components/images/iconadd.png'
+import { logOut } from '../components/firebase/google'
+
 
 export default function Home(){
-    
+const exit= () => {
+    logOut();
+    console.log ("ya me sali")
+}    
     return (
         <div className="margin">
             <div className="background"> 
-            <button className="logout">Logout</button>
+            <button className="logout" onClick={()=>{exit()}}>Logout</button>
             <h1 className="titleHome">My Notes user@mail.com</h1>
             <img src={idea} className = "idea" alt= "imagen idea home "/>
             <img src={logout} className = "iconlogout" alt= "icon exit "/>

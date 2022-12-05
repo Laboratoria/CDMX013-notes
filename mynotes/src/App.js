@@ -1,10 +1,10 @@
 
 import {useState, useEffect} from 'react';
-import {collection, getDocs} from 'firebase/firetore';
-import db from './firebase/config';
-import './App.css';
-import Login from './components/authent/Login.js';
-import Home from './components/authent/Home.js';
+import {collection, getDocs} from 'firebase/firestore';
+import { Route, Routes } from "react-router-dom";
+import db from './components/firebase/config';
+import Login from './views/Login';
+import Home from './views/Home';
 
 
 function App() {
@@ -13,16 +13,24 @@ function App() {
       const saveData = await getDocs (collection (db, "users"));
       console.log(saveData);
     }
+    
     getData();
   },[]);
-  const [user,setUser] = useState ({user: undefined})
+  
+  
+  const [user, setUser] = useState();
+  if (!user){
+      return <Login setUser={setUser}/>;
+  }
   return (
-    <>
+    <Routes>
+     <Route path= '/home' element = {<Home/>} />
      
-      {user?
-      <Home/> : <Login/>}
+     {/* { user?<Route path="/" element={<Home />} />: <Route path="/" element={<Login  setUser={setUser}/>} />
+
+    } */}
     
-    </>
+  </Routes>
   );
 }
 
