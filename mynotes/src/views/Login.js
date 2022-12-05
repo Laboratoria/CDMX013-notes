@@ -7,8 +7,8 @@ export default function Login(props){
     const {setUser} = props;
     
 function googleEvent () {
-
-    setUser(googleAuth);   
+    googleAuth ();
+    setUser();   
    
 } 
 
