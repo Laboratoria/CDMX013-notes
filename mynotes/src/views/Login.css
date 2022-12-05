@@ -1,0 +1,89 @@
+*{
+    padding: 0px;
+    margin: 0px;    
+}
+
+.margin{
+position: absolute;
+width: 834px;
+height: 1194px;
+left: 0px;
+top: 0px;
+background: #F0C419;
+border-radius: 19px;
+}
+
+.background{
+position: absolute;
+box-sizing: border-box;
+width: 725px;
+height: 1053px;
+left: 47px;
+top: 71px;
+background: #FFFBFB;
+border: 1px solid #FFFBFB;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 19px;
+}
+
+.logo{
+position: absolute;
+width: 235px;
+height: 312px;
+left: 232px;
+top: 245px;
+
+}
+.insight{
+    position: absolute;
+    width: 570px;
+    height: 44px;
+    left: 79px;
+    top: 672px;
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #35495E;
+    
+    }
+    .google {
+        position: absolute;
+        width: 360px;
+        height: 83px;
+        left: 182px;
+        top: 793px;
+        color: rgba(0, 0, 0, 0.71);
+        font-size: 20px;
+        font-weight: 800;
+        background-color:rgba(217, 217, 217, 0.34);
+        border-color: transparent;
+        
+        }
+    
+    .titleApp{
+    position: absolute;
+    width: 549px;
+    left: 89px;
+    top: 20px;
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: 200px;
+    font-size: 128px;
+    line-height: 154px;
+    text-align: center;
+    color: #35495E;
+    
+        }
+    
+       
+
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
