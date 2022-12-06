@@ -3,7 +3,7 @@ import {Route, Routes} from "react-router-dom"
 import { collection, getDocs } from 'firebase/firestore';
 import db from './firebase/config';
 import Login from './componentes/no-auth/Login';
-//import Wall from './componentes/wall/Wall';
+import Wall from './componentes/wall/Wall';
 import Welcome from './componentes/Welcome/welcome'
 
 function App () {
@@ -24,8 +24,11 @@ setUser(null)
 
     return (
 <Routes>
-  
-  <Route path="/" element={user?<Welcome exit={userNull}/>:<Login setUser={setUser}/>}/>
+  <Route path="/" element={<Login setUser={setUser}/>}/>
+  <Route path="/welcome" element={user?<Welcome exit={userNull}/>:<Login setUser={setUser}/>}/>
+  <Route path="/wall" element={<Wall/>}/>
+  {/* <Route path="*" element={<NotFound/>}/> */}
+
  </Routes>
 
   )

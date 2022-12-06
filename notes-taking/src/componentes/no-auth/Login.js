@@ -1,13 +1,16 @@
 import {loginGoogle} from'../google'
+import { useNavigate } from 'react-router-dom';
 import './login.css'
 
 export default function Login(props) {
+    const navigate= useNavigate();
     const {setUser}=props;
     console.log(props);
     const click=()=> {
         const promise=loginGoogle();
 promise.then((user)=>{
             setUser(user)
+            navigate ('/welcome');
     }).catch((error)=>{
         console.log(error);
 
