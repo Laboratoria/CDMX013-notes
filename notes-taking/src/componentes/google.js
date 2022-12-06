@@ -5,14 +5,17 @@ const providerGoogle = new GoogleAuthProvider();
 
 export const loginGoogle = ()=> {
 
-  signInWithPopup(auth, providerGoogle)
-    .then((result) => {
+ const loginPromise= signInWithPopup(auth, providerGoogle)
+ 
+   const userPromise= loginPromise.then((result) => {
             //onNavigate('/home');
-            console.log('google sign in');
+          return(result);
         })
     .catch((error) => {
             console.log(error);
+            
         });
+        return (userPromise)
 };
 
 export const signOutAccount = () => signOut(auth);
