@@ -1,17 +1,16 @@
-//import { GoogleAuthProvider } from 'firebase/auth';
+import {signOutAccount} from '../google';
 import '../no-auth/login.css';
-import { signOutAccount} from '../google';
 
-
-
-
-export default function Wall () {
+export default function Wall (props) {
+  const exit= props.exit
   const images = require.context('../../img', true)
-  const out=()=>{
-    signOutAccount()
-    console.log ("estás fuera")
-}
-
+  
+  const signOutA=async()=>{
+    await signOutAccount();
+    exit();
+    console.log("ya me fui");
+  }
+  
   return (
     <div className='wall'>
       <h2>NOTES TAKING</h2>
@@ -19,11 +18,12 @@ export default function Wall () {
       <img src={images('./back.png')} alt={''} className='back' />
       <img src={images('./logout.png')} alt={''} className='logout' />
       <img src={images('./noteOne.png')} alt={''} className='create' />
-      <button className="btn-goOut" onClick={()=>{out()}}>Exit</button>
-
      
+      <button className="btn-goOut" onClick={()=>{signOutA()}}>Exit</button>
+    
     </div>
 
     
   )
-}
+};
+
