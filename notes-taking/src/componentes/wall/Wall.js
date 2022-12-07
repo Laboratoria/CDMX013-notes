@@ -19,8 +19,8 @@ const back= ()=>{
 return (
     <div className='wall'>
       <h3>NOTES TAKING</h3>
-      <h6>Create your note</h6>
-      <img src={images('./note7.png')} alt={''} id='note7' />
+      <h6>Create your note!</h6>
+      <img src={images('./nota 1.png')} alt={''} id='note7' />
 
       <img src={images('./logout.png')}alt={""}className="btn-goOut" onClick={()=>{signOutA()}}></img>
       <img src={images('./back.png')} alt={""} className='back' onClick={()=>{back()}}></img>
