@@ -1,67 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&family=Zen+Loop&display=swap');
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {}
 
 * {
   background-color: #fff5db;
+
 }
 
 h1 {
-  display: flex;
-  font-family: 'Zen Loop', cursive;
+position: absolute;
+margin-top: 50px;  
+margin-left: 140px;
+font-family: 'Zen Loop', cursive;
   font-size: 120px;
-  justify-content: center;
 }
 
-p {
-  display: flex;
+h2 {
+  position: absolute;
+  margin-top: 40px;  
+  margin-left: 250px;
+  font-family: 'Zen Loop', cursive;
+    font-size: 60px;
+  }
+  h3{
+    position: absolute;
+    margin-top: 40px;  
+    margin-left: 250px;
+    font-family: 'Zen Loop', cursive;
+      font-size: 60px;
+      }
+  
+  h4 {
+    position: absolute;
+      font-family: 'Zen Loop', cursive;
+      font-size: 50px;
+      margin-left:200px;
+      margin-top: 0px;
+    }
+  
+   h5 {
+    position: absolute;
+    font-family: 'Yaldevi';
+    font-size: 40px;
+    margin-top: 140px;
+    margin-left: 200px;
+  
+    }
+  
+    h6{
+      position: absolute;
+      font-family: 'Yaldevi';
+      font-size: 40px;
+      margin-top: 140px;
+      margin-left: 230px;
+    
+      }
+    /* h6 {
+      position: absolute;
+      font-family: 'Zen Loop';
+      font-size: 50px;
+      margin-top: 120px;
+      margin-left: 260px;
+    
+      }
+     */
+  
+  p {
+position: absolute;
   font-family: 'Zen Loop', cursive;
   font-size: 50px;
-  justify-content: center;
-  margin-top: -90px;
+  margin-top: 190px;
+  margin-left: 180px;
 }
 
 .firstimg {
   position: absolute;
   margin-left: 40px;
   width: 680px;
-  margin-top: -60px;
+  margin-top: 250px;
 }
 
 .google {
-  display: flex;
+position: absolute;
   margin-left: 240px;
   width: 280px;
-  margin-top: 620px;
+  margin-top: 880px;
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {}
-
-h2 {
-  display: flex;
-  font-family: 'Zen Loop', cursive;
-  font-size: 40px;
-  justify-content: center;
-}
-
-h4 {
-  display: flex;
-  font-family: 'Zen Loop', cursive;
-  font-size: 50px;
-  justify-content: center;
-  margin-top: 10px;
-}
 
 .back {
   position: absolute;
-  margin-left: 20px;
-  width: 50px;
-  margin-top: -180px;
+  margin-left: 12px;
+  width:70px;
+  margin-top: 20px;
 }
 
-.logout {
+.btn-goOut {
   position: absolute;
-  margin-left: 700px;
-  width: 50px;
-  margin-top: -180px;
+  margin-left: 682px;
+  width: 70px;
+  margin-top: 20px;
+}
+.user{
+  position: absolute;
+  margin-left: 10px;
+  width:120px;
+  margin-top: 20px;
+
 }
 
 .create {
@@ -71,22 +115,57 @@ h4 {
   margin-top: 40px;
 
 }
-
-.trash {
+.creates {
   position: absolute;
-  margin-left: 480px;
+  margin-left: 50px;
+  width: 680px;
+  margin-top: 280px;
+
+}
+
+.trash  {
+  position: absolute;
+  margin-left: 450px;
   width: 40px;
   margin-top: 540px;
 
-
-
-
-
-
 }
 
-#notes {
-  display: flex;
- flex-grow: 2;  
- width: 400px;
+#note7 {
+  position:absolute;
+  margin-top:250px ;
+  margin-left:-20px;
+    width: 900px;
 }
+/* #note2 {
+  position:absolute;
+  margin-top:20px ;
+  margin-left: 350px;
+    width: 400px;
+}#note3 {
+  position:absolute;
+  margin-top:330px ;
+  margin-left: 360px;
+    width: 400px;
+}#note4 {
+  position:absolute;
+  margin-top:330px; 
+  margin-left: 50px;
+    width: 400px;
+} */ 
+
+.pencil{
+position: relative;
+margin-top: 550px;
+margin-left:290px;
+width: 180px;
+
+}
+.header{
+  position: relative;
+  margin-top: 109px;
+  margin-left:15px;
+  width: 730px;
+  
+  }
+  

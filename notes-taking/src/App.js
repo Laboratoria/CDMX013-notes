@@ -4,7 +4,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import db from './firebase/config';
 import Login from './componentes/no-auth/Login';
 import Wall from './componentes/wall/Wall';
-import Welcome from './componentes/Welcome/welcome'
+import Welcome from './componentes/Welcome/welcome';
 
 function App () {
   useEffect(() => {
@@ -26,7 +26,8 @@ setUser(null)
 <Routes>
   <Route path="/" element={<Login setUser={setUser}/>}/>
   <Route path="/welcome" element={user?<Welcome exit={userNull}/>:<Login setUser={setUser}/>}/>
-  <Route path="/wall" element={<Wall/>}/>
+  <Route path="/wall" element={user?<Wall exit={userNull}/>:<Login setUser={setUser}/>}/>
+    <Route path="/wall" element={<Wall/>}/>
   {/* <Route path="*" element={<NotFound/>}/> */}
 
  </Routes>
