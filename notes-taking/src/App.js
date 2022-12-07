@@ -4,7 +4,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import db from './firebase/config';
 import Login from './componentes/no-auth/Login';
 import Wall from './componentes/wall/Wall';
-import Welcome from './componentes/Welcome/welcome'
+import Welcome from './componentes/Welcome/welcome';
 
 function App () {
   useEffect(() => {

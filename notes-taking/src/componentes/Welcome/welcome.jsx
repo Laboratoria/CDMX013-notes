@@ -13,25 +13,27 @@ export default function Welcome (props) {
     navigate('/');
     console.log('ya me fui')
   }
+const create= ()=>{
+  navigate('/wall');
+}
 
-  return (
-    <div className='wall'>
+return (
+    <div className='welcome'>
       <h2>NOTES TAKING</h2>
-
-      <img src={images('./back.png')} alt={''} className='back' />
-      <img src={images('./logout.png')} alt={''} className='logout' />
-      <img src={images('./note1.png')} alt={''} id='notes' />
-      <img src={images('./note2.png')} alt={''} id='notes' />
-      <img src={images('./note3.png')} alt={''} id='notes' />
-      <img src={images('./note4.png')} alt={''} id='notes' />
-      <button
-        className='btn-goOut'
-        onClick={() => {
-          signOutA()
-        }}
-      >
-        Exit
-      </button>
+      <h5>¡Agrega tu primer post it!</h5>
+   
+      {/* <img src={images('./note1.png')} alt={''} id='note1' />
+      <img src={images('./note2.png')} alt={''} id='note2' /> 
+      <img src={images('./note3.png')} alt={''} id='note3' />
+      <img src={images('./note4.png')} alt={''} id='note4' />
+      {/* 
+      <img src={images('./pencil.png')} alt={''} className='pencil' /> */}
+      <img src={images('./USUARIO.png')} alt={''} className='user' />
+      <img src={images('./logout.png')}alt={""}className="btn-goOut" onClick={()=>{signOutA()}}></img> 
+      <img src={images('./create.png')}alt={""}className="pencil" onClick={()=>{create()}}></img>
+    
+                  
+      
     </div>
   )
 }

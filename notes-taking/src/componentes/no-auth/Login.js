@@ -30,5 +30,4 @@ promise.then((user)=>{
             <img src={images('./googlebutton.png')}alt={""}className="google" onClick={()=>{click()}}></img>
                     </div>
     )
-
 };
