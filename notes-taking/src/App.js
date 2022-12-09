@@ -27,7 +27,7 @@ setUser(null)
   <Route path="/" element={<Login setUser={setUser}/>}/>
   <Route path="/welcome" element={user?<Welcome exit={userNull}/>:<Login setUser={setUser}/>}/>
   <Route path="/wall" element={user?<Wall exit={userNull}/>:<Login setUser={setUser}/>}/>
-    <Route path="/wall" element={<Wall/>}/>
+    {/* <Route path="/wall" element={<Wall/>}/> */}
   {/* <Route path="*" element={<NotFound/>}/> */}
 
  </Routes>

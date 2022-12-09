@@ -86,7 +86,14 @@ position: absolute;
   margin-top: 880px;
 }
 
-
+.save {
+  position: absolute;
+    margin-left: -50px;
+    width: 40px;
+    margin-top: 356px;
+    background-color: transparent;
+  }
+  
 .back {
   position: absolute;
   margin-left: 12px;
@@ -169,3 +176,27 @@ width: 180px;
   
   }
   
+  .title{
+position: relative;
+margin-top: 330px;
+margin-left: 220px;
+font-family: 'Yaldevi';
+      font-size: 30px;
+      background-color: transparent;
+      border: none;
+ outline: none;
+ text-align: center;
+  }
+
+  .body{
+    position: relative;
+    width: 460px;
+    margin-top: 30px;
+    margin-left: 150px;
+    font-family: 'Yaldevi';
+          font-size: 30px;
+          background-color: transparent;
+          border: none;
+          outline: black;
+          text-align: center;
+      }
