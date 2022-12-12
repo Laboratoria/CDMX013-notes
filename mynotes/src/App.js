@@ -4,12 +4,12 @@ import { Route, Routes } from "react-router-dom";
 import db from "./firebase/config";
 import Login from "./views/Login";
 import Home from "./views/Home";
+import Addnote from "./views/Addnote";
 
 function App() {
   useEffect(() => {
     const getData = async () => {
       const saveData = await getDocs(collection(db, "users"));
-      console.log(saveData);
     };
     getData();
   }, []);
@@ -29,7 +29,7 @@ function App() {
           user ? <Home logOut={setUserNull} /> : <Login setUser={setUser} />
         }
       />
-      {/* <Route path="*" element={<Error />} /> */}
+      <Route path="/Add" element={<Addnote />} />
     </Routes>
   );
 }

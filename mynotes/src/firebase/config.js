@@ -2,13 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBftQRuVt5RU-_VMRCWw4kmDQNOQaooQsQ",
-  authDomain: "mynotes-b67fa.firebaseapp.com",
-  projectId: "mynotes-b67fa",
-  storageBucket: "mynotes-b67fa.appspot.com",
-  messagingSenderId: "700890702169",
-  appId: "1:700890702169:web:d786969b2f05417957ac48",
-  measurementId: "G-RFCC9HCPGN",
+  apiKey: "AIzaSyBvU-DGvSpRus3UHzebLv9x0RzdylFPNEs",
+  authDomain: "mynotes2-a999e.firebaseapp.com",
+  projectId: "mynotes2-a999e",
+  storageBucket: "mynotes2-a999e.appspot.com",
+  messagingSenderId: "834910137132",
+  appId: "1:834910137132:web:59979c27f679ab5fb61a89",
 };
 
 // Initialize Firebase
