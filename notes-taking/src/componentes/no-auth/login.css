@@ -101,6 +101,7 @@ position: absolute;
   margin-top: 20px;
 }
 
+
 .btn-goOut {
   position: absolute;
   margin-left: 682px;
@@ -144,6 +145,14 @@ position: absolute;
   margin-left:-20px;
     width: 900px;
 }
+
+.note6{
+      position:absolute;
+    margin-top:180px ;
+    margin-left:10px;
+      width: 400px;
+  }
+
 /* #note2 {
   position:absolute;
   margin-top:20px ;
@@ -200,3 +209,45 @@ font-family: 'Yaldevi';
           outline: black;
           text-align: center;
       }
+
+      .go{
+        position: absolute;
+        margin-left: 120px;
+        width: 40px;
+        margin-top: 775px;
+        background-color: transparent;
+    
+
+      }
+
+      /* .card{              
+        background-color: #f4dfef;
+        display: flex;
+        padding:50px;
+        width: 170px;
+        margin-top: -9px;
+        margin-left: 3px;
+        border-radius: 8px;
+        border-top: 1px solid rgb(220, 217, 217);
+        border-left: 2px solid rgb(220, 217, 217);
+        border-right: 2px solid rgb(220, 217, 217);
+        border-bottom: 2px solid rgb(220, 217, 217);
+        resize: none;
+    }
+      
+      .card-body{
+        display: block;
+        position: absolute;
+        margin-top: 240px;
+        margin-left: 15px;
+        width: 30%;
+        height: 20%;
+        flex-direction: row;
+        background-color: rgb(194, 176, 228);
+        border-bottom: black;
+    
+
+      }
+.delete{
+  margin-top: 2px;
+} */

@@ -1,84 +1,93 @@
-// import { Wall } from '../wall/Wall'
-// import { useNavigate } from 'react-router-dom'
-// import { useEffect, useState } from 'react'
-// import '../no-auth/login.css'
-// import{getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc} from 'firebase/firestore'
-// import { getAuth } from 'firebase/auth'
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import "../no-auth/login.css";
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, getDoc, setDoc} from "firebase/firestore";
+import { signOutAccount } from "../google";
+import Welcome from "../Welcome/welcome";
+import { getAuth } from 'firebase/auth'
+import {app} from '../../firebase/config'
 
-// const db= getFirestore()
+const db = getFirestore(app);
+const auth=getAuth(app);
 
-// const [lista,setLista]=useState([useEffect])
-// useEffect(()=>{
-// const getLista= async()=>{
-//     try{
-// const querySnapshot= await getDocs(collection(db, 'ususarios'))
-// const docs=[]
-// querySnapshot.forEach((doc)=>{
-// docs.push({...doc.data(), id:doc.id})
-// }) 
-// setLista(docs)
-//     }catch (error){
-//         console.log(error)
-//     }
-// }
-// getLista()
-// },[lista])
+export default function AllNotes(props, { userEmail }) {
+  const navigate = useNavigate();
+  const exit = props.exit;
+  const images = require.context("../../img", true);
 
-// const images = require.context('../../img', true)
+  const signOutA = async () => {
+    await signOutAccount();
+    exit();
 
-// const signOutA = async () => {
-// await signOutAccount(auth)
-// exit()
+    navigate("/");
+    console.log("ya me fui");
+  };
 
-// navigate('/')
-// console.log('ya me fui')
-// }
-// const back = () => {
-// navigate('/welcome')
-// }
-//    return (
-//      <div className='allNotes'>
-//        <h3>NOTES TAKING</h3>
-//       {/* <h6>Create your note!</h6> */}
-//      <img src={images('./nota 1.png')} alt={''} id='note7' />
-//        <img
-//          src={images('./logout.png')}
-//          alt={''}
-//          className='btn-goOut'
-//          onClick={() => {
-//            signOutA()
-//          }}
-//        ></img>
-//        <img
-//          src={images('./back.png')}
-//          alt={''}
-//          className='back'
-//          onClick={() => {
-//            back()
-//          }}
-//        ></img>
+  const back = () => {
+    navigate("/wall");
+  };
 
-//        <div className='containerCard>
-//        <div className= 'cardBody'>
+  const [lista, setLista] = useState(null);
 
-//        {
-        
-//                lista.map(list=>(
-//             <div key={list.id}>
-//                 <p>{list.title}</p>
-//                 <p>{list.body}</p>
-//                 <button className='delete'>Delete</button>
-//                 <button className='edit'>Edit</button>
-//                 </div>
-//                 </div>
-//                 </div>
-//         )) }
-//     )    
-//     {
-        
-//     }
+  useEffect(() => {
+    const getLista = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "usuarios"));
+        const docs = [];
+        querySnapshot.forEach((doc) => {
+          docs.push({ ...doc.data(), id: doc.id });
+        });
+        setLista(docs);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getLista();
+  }, []);
 
-         
-        
-                
- 
+  //función para delete
+  const deletePost = async (id) => {
+    await deleteDoc(doc(db, "usuarios", id));
+  };
+
+  if (!lista) {
+    return <h1>Cargando...</h1>;
+  }
+
+  return (
+    <div className="allNotes">
+      {/* <p>
+        <strong>{userEmail}</strong>
+      </p> */}
+      <h3>NOTES TAKING</h3>
+      <h6>Create your note!</h6>
+      <img src={images("./logout.png")} alt={""} className="btn-goOut" onClick={() => 
+      { signOutA();
+        }}></img>
+      
+      <img
+        src={images("./back.png")}
+        alt={""}
+        className="back"
+        onClick={() => {
+          back();
+        }}
+      ></img>
+      
+      <div className="card-body">
+        {lista.length === 0 && <Welcome/>}
+        {lista.map((list) => (
+          <article className="card" key={list.id}>
+            <p>{list.title}</p>
+            <p>{list.body}</p>
+            <button className="delete" onClick={() =>{ deletePost(list.id)}}>
+              Delete
+            </button>
+            
+            <button className="edit">Edit</button>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
