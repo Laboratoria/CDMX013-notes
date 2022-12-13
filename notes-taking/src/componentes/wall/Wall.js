@@ -38,7 +38,7 @@ export default function Wall (props) {
   const guardarDatos = async (e) => {
     e.preventDefault();
 
-    if (user.title !== "" && user.body !== ""){
+    if (user.title !== "" || user.body !== ""){
  
   try{ 
     await addDoc(collection(db,'usuarios'),{
