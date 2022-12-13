@@ -2,7 +2,8 @@ import { signOutAccount } from '../google'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import '../no-auth/login.css'
-import{getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc} from 'firebase/firestore'
+import{getFirestore, collection, addDoc} from 'firebase/firestore'
+//getDocs, doc, deleteDoc, getDoc, setDoc
 import { getAuth } from 'firebase/auth'
 
 const auth=getAuth()
@@ -15,8 +16,7 @@ export default function Wall (props) {
 
   const signOutA = async () => {
     await signOutAccount(auth)
-    exit()
-
+    exit();
     navigate('/')
     console.log('ya me fui')
   }
@@ -37,16 +37,24 @@ export default function Wall (props) {
 
   const guardarDatos = async (e) => {
     e.preventDefault();
-    console.log(user);
-try{ 
-  await addDoc(collection(db,'usuarios'),{
-  ...user
-} )
-} catch(error){
 
-  console.log(error)
+    if (user.title !== "" && user.body !== ""){
+ 
+  try{ 
+    await addDoc(collection(db,'usuarios'),{
+    ...user
+  } )
+  } catch(error){
+    console.log(error)
+  }
+  
+  navigate('/allNotes');
+  setUser({ ...valorInicial }); 
+}else {
+alert ("No puedes guardar notas vacías")
 }
- setUser({ ...valorInicial }); 
+
+   
   }
 
   return (
@@ -70,6 +78,7 @@ try{
         onClick={() => {
           back()
         }}
+        
       ></img>
       <form onSubmit={guardarDatos}>
         <input
