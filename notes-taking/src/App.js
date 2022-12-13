@@ -5,9 +5,9 @@ import Wall from './componentes/wall/Wall';
 //import Welcome from './componentes/Welcome/welcome';
 import AllNotes from './componentes/AllNotes/AllNotes'
 
-
 function App () {
-    const [user, setUser] = useState(undefined)
+
+  const [user, setUser] = useState(undefined)
 
 function userNull(){
 setUser(null)
