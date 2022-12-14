@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import '../AllNotes/allNotes.css';
+import "../no-auth/login.css";
 import {
   getFirestore,
   collection,
@@ -65,7 +65,7 @@ export default function AllNotes(props, { userEmail }) {
   // });
 
   if (!lista) {
-    return <h1>Cargando...</h1>;
+    return <h3>Cargando...</h3>;
   }
 
   return (
@@ -73,8 +73,8 @@ export default function AllNotes(props, { userEmail }) {
       {/* <p>
         <strong>{userEmail}</strong>
       </p> */}
-      <h3>NOTES TAKING</h3>
-      <h6>Create your note!</h6>
+      <h4>NOTES TAKING</h3>
+      <h6>All your notes!</h6>
 
       <img
         src={images("./logout.png")}
@@ -112,6 +112,7 @@ export default function AllNotes(props, { userEmail }) {
             <button className="edit">Edit</button>
           </article>
         ))}
+
       </div>
     </div>
   );
