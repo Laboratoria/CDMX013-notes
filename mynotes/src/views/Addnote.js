@@ -1,22 +1,24 @@
 import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 import { db } from "../firebase/config";
 import "./Home.css";
 import "./Addnote.css";
-import logout from "../components/images/iconlogout.png";
 import { HandleSignOut } from "../components/buttons/Exit";
+
 export default function Addnote() {
+  //valor inicial de mi objeto
   const noteInit = {
     title: "",
     note: "",
   };
-  //variables de estado
+  //variable de estado
   const [user, setUser] = useState(noteInit);
+  const navigate = useNavigate();
 
   //funcion capturar inputs
-
   const captInputs = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target; //inputs
     setUser({ ...user, [name]: value });
   };
 
@@ -30,6 +32,7 @@ export default function Addnote() {
     } catch (error) {
       console.log(error);
     }
+    navigate("/Home");
     setUser({ ...noteInit });
   };
 
@@ -37,7 +40,7 @@ export default function Addnote() {
     <div className="margin">
       <div className="background">
         <h1 className="titleHome">My Notes user@mail.com</h1>
-        <HandleSignOut />
+        <button className="logout">Logout</button>
         <form className="note" onSubmit={saveNote}>
           <input
             type="text"
@@ -56,8 +59,8 @@ export default function Addnote() {
           />
           <button className="buttonSave">Guardar</button>
         </form>
-        <img src={logout} className="iconlogout" alt="icon exit " />
         <h3 className="insightHome">Creating a new note ...</h3>
+        <HandleSignOut />
       </div>
     </div>
   );

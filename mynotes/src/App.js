@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { Route, Routes } from "react-router-dom";
-import db from "./firebase/config";
+import { db, app } from "./firebase/config";
 import Login from "./views/Login";
 import Home from "./views/Home";
 import Addnote from "./views/Addnote";
