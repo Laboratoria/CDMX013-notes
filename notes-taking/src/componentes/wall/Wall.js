@@ -66,7 +66,7 @@ alert ("No puedes guardar notas vacías")
       <img
         src={images('./logout.png')}
         alt={''}
-        className='btn-goOut'
+        className='goOut'
         onClick={() => {
           signOutA()
         }}
@@ -74,7 +74,7 @@ alert ("No puedes guardar notas vacías")
       <img
         src={images('./back.png')}
         alt={''}
-        className='back'
+        className='bac'
         onClick={() => {
           back()
         }}

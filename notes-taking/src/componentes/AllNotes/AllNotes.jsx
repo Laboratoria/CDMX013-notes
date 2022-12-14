@@ -73,9 +73,8 @@ export default function AllNotes(props, { userEmail }) {
       {/* <p>
         <strong>{userEmail}</strong>
       </p> */}
-      <h4>NOTES TAKING</h4>
-      <h6>All your notes!</h6>
-
+      <h2>ALL YOUR NOTES!</h2>
+   
       <img
         src={images("./logout.png")}
         alt={""}
@@ -98,8 +97,8 @@ export default function AllNotes(props, { userEmail }) {
         {lista.length === 0 && <Welcome />}
         {lista.map((list) => (
           <article className="card" key={list.id}>
-            <p>{list.title}</p>
-            <p>{list.body}</p>
+            {list.title}
+            {list.body}
             <button
               className="delete"
               onClick={() => {

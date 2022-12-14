@@ -21,7 +21,7 @@ export default function Welcome(props) {
 
   return (
     <div className="welcome">
-      <h2>NOTES TAKING</h2>
+      <h1>NOTES TAKING</h1>
       <h5>Add your first post-it!</h5>
       <img src={images("./USUARIO.png")} alt={""} className="user" />
       <img
