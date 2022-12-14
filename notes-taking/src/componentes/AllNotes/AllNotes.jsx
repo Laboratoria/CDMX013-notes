@@ -73,7 +73,7 @@ export default function AllNotes(props, { userEmail }) {
       {/* <p>
         <strong>{userEmail}</strong>
       </p> */}
-      <h4>NOTES TAKING</h3>
+      <h4>NOTES TAKING</h4>
       <h6>All your notes!</h6>
 
       <img
