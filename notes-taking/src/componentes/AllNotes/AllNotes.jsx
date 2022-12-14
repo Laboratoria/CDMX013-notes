@@ -1,14 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "../no-auth/login.css";
-import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, getDoc, setDoc} from "firebase/firestore";
+import '../AllNotes/allNotes.css';
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  deleteDoc,
+  doc,
+  getDoc,
+  setDoc,
+} from "firebase/firestore";
 import { signOutAccount } from "../google";
 import Welcome from "../Welcome/welcome";
-import { getAuth } from 'firebase/auth'
-import {app} from '../../firebase/config'
+import { getAuth } from "firebase/auth";
+import { app } from "../../firebase/config";
 
 const db = getFirestore(app);
-const auth=getAuth(app);
+const auth = getAuth(app);
 
 export default function AllNotes(props, { userEmail }) {
   const navigate = useNavigate();
@@ -46,9 +55,14 @@ export default function AllNotes(props, { userEmail }) {
   }, []);
 
   //función para delete
+  // if (auth.currentUser.id === doc.id) {
   const deletePost = async (id) => {
     await deleteDoc(doc(db, "usuarios", id));
   };
+
+  // deletePost.addEventListener('click', async () => {
+  //   await deletePost(doc.id);
+  // });
 
   if (!lista) {
     return <h1>Cargando...</h1>;
@@ -61,10 +75,16 @@ export default function AllNotes(props, { userEmail }) {
       </p> */}
       <h3>NOTES TAKING</h3>
       <h6>Create your note!</h6>
-      <img src={images("./logout.png")} alt={""} className="btn-goOut" onClick={() => 
-      { signOutA();
-        }}></img>
-      
+
+      <img
+        src={images("./logout.png")}
+        alt={""}
+        className="btn-goOut"
+        onClick={() => {
+          signOutA();
+        }}
+      ></img>
+
       <img
         src={images("./back.png")}
         alt={""}
@@ -73,17 +93,22 @@ export default function AllNotes(props, { userEmail }) {
           back();
         }}
       ></img>
-      
+
       <div className="card-body">
-        {lista.length === 0 && <Welcome/>}
+        {lista.length === 0 && <Welcome />}
         {lista.map((list) => (
           <article className="card" key={list.id}>
             <p>{list.title}</p>
             <p>{list.body}</p>
-            <button className="delete" onClick={() =>{ deletePost(list.id)}}>
+            <button
+              className="delete"
+              onClick={() => {
+                deletePost(list.id);
+              }}
+            >
               Delete
             </button>
-            
+
             <button className="edit">Edit</button>
           </article>
         ))}
