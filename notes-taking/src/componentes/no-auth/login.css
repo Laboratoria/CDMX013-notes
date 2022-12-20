@@ -1,71 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&family=Zen+Loop&display=swap');
+
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {}
 
 * {
   background-color: #fff5db;
-
 }
 
-h1 {
-position: absolute;
-margin-top: 50px;  
-margin-left: 140px;
-font-family: 'Zen Loop', cursive;
+/* LoginView */
+h1, h3 {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 140px;
+  font-family: 'Zen Loop', cursive;
   font-size: 120px;
 }
 
-h2 {
+p {
   position: absolute;
-  margin-top: 40px;  
-  margin-left: 250px;
-  font-family: 'Zen Loop', cursive;
-    font-size: 60px;
-  }
-  h3{
-    position: absolute;
-    margin-top: 40px;  
-    margin-left: 250px;
-    font-family: 'Zen Loop', cursive;
-      font-size: 60px;
-      }
-  
-  h4 {
-    position: absolute;
-      font-family: 'Zen Loop', cursive;
-      font-size: 50px;
-      margin-left:200px;
-      margin-top: 0px;
-    }
-  
-   h5 {
-    position: absolute;
-    font-family: 'Yaldevi';
-    font-size: 40px;
-    margin-top: 140px;
-    margin-left: 200px;
-  
-    }
-  
-    h6{
-      position: absolute;
-      font-family: 'Yaldevi';
-      font-size: 40px;
-      margin-top: 140px;
-      margin-left: 230px;
-    
-      }
-    /* h6 {
-      position: absolute;
-      font-family: 'Zen Loop';
-      font-size: 50px;
-      margin-top: 120px;
-      margin-left: 260px;
-    
-      }
-     */
-  
-  p {
-position: absolute;
   font-family: 'Zen Loop', cursive;
   font-size: 50px;
   margin-top: 190px;
@@ -80,27 +31,44 @@ position: absolute;
 }
 
 .google {
-position: absolute;
+  position: absolute;
   margin-left: 240px;
   width: 280px;
   margin-top: 880px;
 }
 
-.save {
+/* WelcomeView */
+h2 {
   position: absolute;
-    margin-left: -50px;
-    width: 40px;
-    margin-top: 356px;
-    background-color: transparent;
-  }
-  
-.back {
-  position: absolute;
-  margin-left: 12px;
-  width:70px;
-  margin-top: 20px;
+  margin-top: -10px;
+  margin-left: 250px;
+  font-family: 'Zen Loop', cursive;
+  font-size: 60px;
 }
 
+
+h5 {
+  position: absolute;
+  font-family: 'Yaldevi';
+  font-size: 40px;
+  margin-top: 140px;
+  margin-left: 200px;
+}
+
+.user {
+  position: absolute;
+  margin-left: 10px;
+  width: 120px;
+  margin-top: 20px;
+
+}
+
+.btn-goOut {
+  position: absolute;
+  margin-left: 682px;
+  width: 70px;
+  margin-top: -20px;
+}
 
 .btn-goOut {
   position: absolute;
@@ -108,12 +76,118 @@ position: absolute;
   width: 70px;
   margin-top: 20px;
 }
-.user{
-  position: absolute;
-  margin-left: 10px;
-  width:120px;
-  margin-top: 20px;
 
+.goOut {
+  position: absolute;
+  margin-left: 682px;
+  width: 70px;
+  margin-top: 20px;
+}
+
+
+.creates {
+  position: absolute;
+  margin-left: 50px;
+  width: 680px;
+  margin-top: 280px;
+
+}
+
+/* AllNotes View */
+h6 {
+  position: absolute;
+  font-family: 'Yaldevi';
+  font-size: 40px;
+  margin-top: 180px;
+  margin-left: 250px;
+
+}
+
+.back {
+  position: absolute;
+  margin-left: 12px;
+  width: 70px;
+  margin-top: -20px;
+}
+
+
+.bac {
+  position: absolute;
+  margin-left: 12px;
+  width: 70px;
+  margin-top: 20px;
+}
+
+.card{
+  background-color: #f4dfef;
+  display: flex;
+  flex-direction:column;
+justify-content:space-between;
+  padding:150px;
+  width: 170px;
+  /* height: 180; */
+  margin-top: 140px;
+  margin-left: 30px;
+  font-size: 30px;
+}
+.delete{
+  position: absolute;
+  margin-top: 230px;
+  font-size: 20px;
+margin-left: 170px;
+}
+.edit{
+  position: absolute;
+  margin-left: 260px;
+  margin-top: 230px;
+  font-size: 20px;
+}
+.card-body{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: -20px;
+  margin-top: 50px;
+  border-radius: 18px;
+  border-top: 1px solid rgb(220, 217, 217);
+  border-left: 2px solid rgb(220, 217, 217);
+  border-right: 2px solid rgb(220, 217, 217);
+  border-bottom: 2px solid rgb(220, 217, 217);
+  resize: none;
+
+}
+.title {
+  position: relative;
+  margin-top: 330px;
+  margin-left: 220px;
+  font-family: 'Yaldevi';
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.body {
+  position: relative;
+  width: 460px;
+  margin-top: 30px;
+  margin-left: 150px;
+  font-family: 'Yaldevi';
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  outline: black;
+  text-align: center;
+}
+
+.save {
+  position: absolute;
+  margin-left: -50px;
+  width: 40px;
+  margin-top: 356px;
+  background-color: transparent;
 }
 
 .create {
@@ -123,131 +197,53 @@ position: absolute;
   margin-top: 40px;
 
 }
-.creates {
-  position: absolute;
-  margin-left: 50px;
-  width: 680px;
-  margin-top: 280px;
 
+h4 {
+  position: absolute;
+  font-family: 'Zen Loop', cursive;
+  font-size: 50px;
+  margin-left: 200px;
+  margin-top: 0px;
 }
 
-.trash  {
-  position: absolute;
-  margin-left: 450px;
-  width: 40px;
-  margin-top: 540px;
 
-}
 
 #note7 {
-  position:absolute;
-  margin-top:250px ;
-  margin-left:-20px;
-    width: 900px;
+  position: absolute;
+  margin-top: 250px;
+  margin-left: -20px;
+  width: 900px;
 }
 
-.note6{
-      position:absolute;
-    margin-top:180px ;
-    margin-left:10px;
-      width: 400px;
-  }
+.note6 {
+  position: absolute;
+  margin-top: 180px;
+  margin-left: 10px;
+  width: 400px;
+}
 
-/* #note2 {
-  position:absolute;
-  margin-top:20px ;
-  margin-left: 350px;
-    width: 400px;
-}#note3 {
-  position:absolute;
-  margin-top:330px ;
-  margin-left: 360px;
-    width: 400px;
-}#note4 {
-  position:absolute;
-  margin-top:330px; 
-  margin-left: 50px;
-    width: 400px;
-} */ 
-
-.pencil{
-position: relative;
-margin-top: 550px;
-margin-left:290px;
-width: 180px;
+.pencil {
+  position: relative;
+  margin-top: 550px;
+  margin-left: 290px;
+  width: 180px;
 
 }
-.header{
+
+.header {
   position: relative;
   margin-top: 109px;
-  margin-left:15px;
+  margin-left: 15px;
   width: 730px;
-  
-  }
-  
-  .title{
-position: relative;
-margin-top: 330px;
-margin-left: 220px;
-font-family: 'Yaldevi';
-      font-size: 30px;
-      background-color: transparent;
-      border: none;
- outline: none;
- text-align: center;
-  }
 
-  .body{
-    position: relative;
-    width: 460px;
-    margin-top: 30px;
-    margin-left: 150px;
-    font-family: 'Yaldevi';
-          font-size: 30px;
-          background-color: transparent;
-          border: none;
-          outline: black;
-          text-align: center;
-      }
+}
 
-      .go{
-        position: absolute;
-        margin-left: 120px;
-        width: 40px;
-        margin-top: 775px;
-        background-color: transparent;
-    
+.go {
+  position: absolute;
+  margin-left: 120px;
+  width: 40px;
+  margin-top: 775px;
+  background-color: transparent;
 
-      }
 
-      /* .card{              
-        background-color: #f4dfef;
-        display: flex;
-        padding:50px;
-        width: 170px;
-        margin-top: -9px;
-        margin-left: 3px;
-        border-radius: 8px;
-        border-top: 1px solid rgb(220, 217, 217);
-        border-left: 2px solid rgb(220, 217, 217);
-        border-right: 2px solid rgb(220, 217, 217);
-        border-bottom: 2px solid rgb(220, 217, 217);
-        resize: none;
-    }
-      
-      .card-body{
-        display: block;
-        position: absolute;
-        margin-top: 240px;
-        margin-left: 15px;
-        width: 30%;
-        height: 20%;
-        flex-direction: row;
-        background-color: rgb(194, 176, 228);
-        border-bottom: black;
-    
-
-      }
-.delete{
-  margin-top: 2px;
-} */
+}

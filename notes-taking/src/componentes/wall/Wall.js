@@ -2,12 +2,12 @@ import { signOutAccount } from '../google'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import '../no-auth/login.css'
-import{getFirestore, collection, addDoc} from 'firebase/firestore'
+import { getFirestore, collection, addDoc } from 'firebase/firestore'
 //getDocs, doc, deleteDoc, getDoc, setDoc
 import { getAuth } from 'firebase/auth'
 
-const auth=getAuth()
-const db= getFirestore()
+const auth = getAuth()
+const db = getFirestore()
 
 export default function Wall (props) {
   const navigate = useNavigate()
@@ -16,7 +16,7 @@ export default function Wall (props) {
 
   const signOutA = async () => {
     await signOutAccount(auth)
-    exit();
+    exit()
     navigate('/')
     console.log('ya me fui')
   }
@@ -26,35 +26,32 @@ export default function Wall (props) {
 
   const valorInicial = {
     title: '',
-    body: '',
+    body: ''
   }
 
   const [user, setUser] = useState(valorInicial)
-  const capturarInputs = (e) =>{
+  const capturarInputs = (e) => {
     const { name, value } = e.target
     setUser({ ...user, [name]: value })
   }
 
   const guardarDatos = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    if (user.title !== "" || user.body !== ""){
- 
-  try{ 
-    await addDoc(collection(db,'usuarios'),{
-    ...user
-  } )
-  } catch(error){
-    console.log(error)
-  }
-  
-  navigate('/allNotes');
-  setUser({ ...valorInicial }); 
-}else {
-alert ("No puedes guardar notas vacías")
-}
+    if (user.title !== '' || user.body !== '') {
+      try {
+        await addDoc(collection(db, 'usuarios'), {
+          ...user
+        })
+      } catch (error) {
+        console.log(error)
+      }
 
-   
+      navigate('/allNotes')
+      setUser({ ...valorInicial })
+    } else {
+      alert('No puedes guardar notas vacías')
+    }
   }
 
   return (
@@ -66,7 +63,7 @@ alert ("No puedes guardar notas vacías")
       <img
         src={images('./logout.png')}
         alt={''}
-        className='btn-goOut'
+        className='goOut'
         onClick={() => {
           signOutA()
         }}
@@ -74,11 +71,10 @@ alert ("No puedes guardar notas vacías")
       <img
         src={images('./back.png')}
         alt={''}
-        className='back'
+        className='bac'
         onClick={() => {
           back()
         }}
-        
       ></img>
       <form onSubmit={guardarDatos}>
         <input
@@ -97,13 +93,10 @@ alert ("No puedes guardar notas vacías")
           onChange={capturarInputs}
           value={user.body}
         />
-        <button><img
-        src={images('./save.png')} alt={''} className='save'></img>
-      </button>
-
+        <button>
+          <img src={images('./save.png')} alt={''} className='save'></img>
+        </button>
       </form>
-
-      
     </div>
   )
 }
