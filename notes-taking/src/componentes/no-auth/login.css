@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&family=Zen+Loop&display=swap');
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+* {
+  background-color: #fff5db;
+}
+
+/* LoginView */
+h1, h3 {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 140px;
+  font-family: 'Zen Loop', cursive;
+  font-size: 120px;
+}
+
+p {
+  position: absolute;
+  font-family: 'Zen Loop', cursive;
+  font-size: 50px;
+  margin-top: 190px;
+  margin-left: 180px;
+}
+
+.firstimg {
+  position: absolute;
+  margin-left: 40px;
+  width: 680px;
+  margin-top: 250px;
+}
+
+.google {
+  position: absolute;
+  margin-left: 240px;
+  width: 280px;
+  margin-top: 880px;
+}
+
+/* WelcomeView */
+h2 {
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 250px;
+  font-family: 'Zen Loop', cursive;
+  font-size: 60px;
+}
+
+
+h5 {
+  position: absolute;
+  font-family: 'Yaldevi';
+  font-size: 40px;
+  margin-top: 140px;
+  margin-left: 200px;
+}
+
+.user {
+  position: absolute;
+  margin-left: 10px;
+  width: 120px;
+  margin-top: 20px;
+
+}
+
+.btn-goOut {
+  position: absolute;
+  margin-left: 682px;
+  width: 70px;
+  margin-top: -20px;
+}
+
+.btn-goOut {
+  position: absolute;
+  margin-left: 682px;
+  width: 70px;
+  margin-top: 20px;
+}
+
+.goOut {
+  position: absolute;
+  margin-left: 682px;
+  width: 70px;
+  margin-top: 20px;
+}
+
+
+.creates {
+  position: absolute;
+  margin-left: 50px;
+  width: 680px;
+  margin-top: 280px;
+
+}
+
+/* AllNotes View */
+h6 {
+  position: absolute;
+  font-family: 'Yaldevi';
+  font-size: 40px;
+  margin-top: 180px;
+  margin-left: 250px;
+
+}
+
+.back {
+  position: absolute;
+  margin-left: 12px;
+  width: 70px;
+  margin-top: -20px;
+}
+
+
+.bac {
+  position: absolute;
+  margin-left: 12px;
+  width: 70px;
+  margin-top: 20px;
+}
+
+.card{
+  background-color: #f4dfef;
+  display: flex;
+  flex-direction:column;
+justify-content:space-between;
+  padding:150px;
+  width: 170px;
+  /* height: 180; */
+  margin-top: 140px;
+  margin-left: 30px;
+  font-size: 30px;
+}
+.delete{
+  position: absolute;
+  margin-top: 230px;
+  font-size: 20px;
+margin-left: 170px;
+}
+.edit{
+  position: absolute;
+  margin-left: 260px;
+  margin-top: 230px;
+  font-size: 20px;
+}
+.card-body{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: -20px;
+  margin-top: 50px;
+  border-radius: 18px;
+  border-top: 1px solid rgb(220, 217, 217);
+  border-left: 2px solid rgb(220, 217, 217);
+  border-right: 2px solid rgb(220, 217, 217);
+  border-bottom: 2px solid rgb(220, 217, 217);
+  resize: none;
+
+}
+.title {
+  position: relative;
+  margin-top: 330px;
+  margin-left: 220px;
+  font-family: 'Yaldevi';
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.body {
+  position: relative;
+  width: 460px;
+  margin-top: 30px;
+  margin-left: 150px;
+  font-family: 'Yaldevi';
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  outline: black;
+  text-align: center;
+}
+
+.save {
+  position: absolute;
+  margin-left: -50px;
+  width: 40px;
+  margin-top: 356px;
+  background-color: transparent;
+}
+
+.create {
+  position: absolute;
+  margin-left: 70px;
+  width: 630px;
+  margin-top: 40px;
+
+}
+
+h4 {
+  position: absolute;
+  font-family: 'Zen Loop', cursive;
+  font-size: 50px;
+  margin-left: 200px;
+  margin-top: 0px;
+}
+
+
+
+#note7 {
+  position: absolute;
+  margin-top: 250px;
+  margin-left: -20px;
+  width: 900px;
+}
+
+.note6 {
+  position: absolute;
+  margin-top: 180px;
+  margin-left: 10px;
+  width: 400px;
+}
+
+.pencil {
+  position: relative;
+  margin-top: 550px;
+  margin-left: 290px;
+  width: 180px;
+
+}
+
+.header {
+  position: relative;
+  margin-top: 109px;
+  margin-left: 15px;
+  width: 730px;
+
+}
+
+.go {
+  position: absolute;
+  margin-left: 120px;
+  width: 40px;
+  margin-top: 775px;
+  background-color: transparent;
+
+
+}
